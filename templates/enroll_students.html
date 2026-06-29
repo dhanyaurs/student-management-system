@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enroll Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Enroll Student</h2>
+
+<div class="form-container">
+    <form method="POST">
+        
+        <label>Student</label>
+        <select name="student_id" required>
+            <option value="">Select Student</option>
+            {% for s in students %}
+                <option value="{{ s[0] }}">{{ s[0] }} - {{ s[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Course</label>
+        <select name="course_id" required>
+            <option value="">Select Course</option>
+            {% for c in courses %}
+                <option value="{{ c[0] }}">{{ c[0] }} - {{ c[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Enroll">
+    </form>
+
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <a href="/enroll" class="back-link">Back</a>
+</div>
+
+</body>
+</html>

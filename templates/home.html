@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Student Management System</h2>
+    
+    <div class="button-container">
+<a href="/add_student"><button>Add Student</button></a>
+<a href="/view_student"><button>View Students</button></a>
+<a href="/add_course"><button>Add Course</button></a>
+<a href="/view_courses"><button>View Course</button></a>
+<a href="{{url_for('enroll')}}"><button>Enroll</button></a>
+<a href="/report"><button>Generate Report</button></a>
+<a href="{{ url_for('logout') }}"><button>Logout</button></a>
+    </div>
+</body>
+</html>

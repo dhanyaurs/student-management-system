@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Courses of Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>View Courses of Student</h2>
+
+<form method="POST" class="form-box">
+    <label>Enter Student ID:</label>
+    <input type="number" name="student_id" required>
+    <button type="submit">Search</button>
+</form>
+
+{% if courses %}
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+        </tr>
+        {% for c in courses %}
+        <tr>
+            <td>{{ c[0] }}</td>
+            <td>{{ c[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}
+
+<a href="/enroll" class="back-link">Back</a>
+
+</body>
+</html>

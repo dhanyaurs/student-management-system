@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enroll</h2>
+
+<a href="/enroll_student"><button>Enroll Student into Course</button></a>
+<a href="/student-courses"><button>View Courses of a Student</button></a>
+<a href="/course-students"><button>View Students with Courses</button></a>
+<br><br>
+<a href="{{url_for('home')}}">Back to Home</a>
+</body>
+</html>

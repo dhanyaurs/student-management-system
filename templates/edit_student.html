@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Edit Student</h2>
+
+<div class="form-container">
+    <form method="POST">
+        <label>Email</label>
+        <input type="email" name="email" value="{{ student[4] }}" required>
+
+        <label>Phone</label>
+        <input type="text" name="phone_number" value="{{ student[5] }}" required>
+
+        <input type="submit" value="Update">
+    </form>
+
+    <a href="{{ url_for('view_studentt') }}" class="back-link">Back to Students List</a>
+</div>
+
+</body>
+</html>
