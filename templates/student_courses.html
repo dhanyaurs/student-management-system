@@ -25,8 +25,8 @@
         </tr>
         {% for c in courses %}
         <tr>
-            <td>{{ c[0] }}</td>
-            <td>{{ c[1] }}</td>
+            <td>{{ c['course_id'] }}</td>
+            <td>{{ c['course_name'] }}</td>
         </tr>
         {% endfor %}
     </table>

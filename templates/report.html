@@ -19,10 +19,10 @@
 
         {% for row in report %}
         <tr>
-            <td>{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
-            <td>{{ row[2] }}</td>
-            <td>{{ row[3] }}</td>
+            <td>{{ row['student_id'] }}</td>
+            <td>{{ row['student_name'] }}</td>
+            <td>{{ row['course_id'] }}</td>
+            <td>{{ row['course_name'] }}</td>
         </tr>
         {% endfor %}
     </table>

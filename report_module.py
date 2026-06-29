@@ -1,5 +1,4 @@
 from database_module import create_connection
-from mysql.connector import Error
 
 def student_enrollment_report():
     conn = create_connection()
@@ -17,9 +16,10 @@ def student_enrollment_report():
         JOIN courses c ON e.course_id = c.course_id
         """
         cursor.execute(sql)
-        return cursor.fetchall()
+        rows = cursor.fetchall()
+        return rows if rows else []
 
-    except Error as e:
+    except Exception as e:
         return []
 
     finally:

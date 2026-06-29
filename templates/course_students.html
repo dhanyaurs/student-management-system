@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>View Students for a Course</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -29,10 +29,10 @@
 
             {% for s in students %}
             <tr>
-                <td>{{ s[0] }}</td>
-                <td>{{ s[1] }}</td>
-                <td>{{ s[2] }}</td>
-                <td>{{ s[3] }}</td>
+                <td>{{ s['student_id'] }}</td>
+                <td>{{ s['student_name'] }}</td>
+                <td>{{ s['email'] }}</td>
+                <td>{{ s['phone_number'] }}</td>
             </tr>
             {% endfor %}
         </table>
@@ -41,5 +41,4 @@
 
     <a href="/enroll" class="back-link">Back</a>
 </body>
-
 </html>

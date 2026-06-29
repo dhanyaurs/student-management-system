@@ -11,10 +11,10 @@
 <div class="form-container">
     <form method="POST">
         <label>Email</label>
-        <input type="email" name="email" value="{{ student[4] }}" required>
+        <input type="email" name="email" value="{{ student['email'] }}" required>
 
         <label>Phone</label>
-        <input type="text" name="phone_number" value="{{ student[5] }}" required>
+        <input type="text" name="phone_number" value="{{ student['phone_number'] }}" required>
 
         <input type="submit" value="Update">
     </form>
@@ -24,3 +24,4 @@
 
 </body>
 </html>
+
