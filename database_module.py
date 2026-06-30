@@ -7,11 +7,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 2. Extract the credentials safely
-DB_HOST = os.environ.get("DB_HOST", "localhost")
-DB_PORT = int(os.environ.get("DB_PORT", 3306))
-DB_USER = os.environ.get("DB_USER", "root")
+# 2. Extract database credentials securely
+DB_HOST = os.environ.get("DB_HOST", "://aivencloud.com")
+DB_PORT = int(os.environ.get("DB_PORT", 23468))
+DB_USER = os.environ.get("DB_USER", "avnadmin")
 DB_PASSWORD = os.environ.get("DB_PASSWORD", "")
-DB_NAME = os.environ.get("DB_NAME", "student_db")
+DB_NAME = os.environ.get("DB_NAME", "defaultdb")
+
 
 # 3. Initialize a secure, reusable connection pool (The Taxi Stand)
 # We use standard PyMySQL DictCursor so database rows return as clean dictionaries
